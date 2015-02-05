@@ -26,10 +26,19 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
+		<script src="http://code.jquery.com/jquery-1.11.2.js"></script>
+<script type="text/javascript" charset="utf-8">
+    $('#apache').click(function() {
+        var ref = window.open('http://apache.org', '_blank', 'location=yes');
+        ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+        ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+        ref.addEventListener('exit', function() { alert(event.type); });
+    });
+</script>
 	</head>
     <body>
         <div class="app">
-		<br><br><button type="button" onclick="window.location.href='sample.html'">Click this to open in-app browser</button>
+		<a href="#" id="apache">Apache</a>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
