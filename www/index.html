@@ -27,9 +27,11 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
 <script src="http://code.jquery.com/jquery-1.11.2.js"></script>
-<script type="text/javascript" charset="utf-8">
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+<!--<script type="text/javascript" charset="utf-8">
 $(document).on('click', '#apache', function() {
-        var ref = window.open('https://suns247.windstream.com:8183/mobile.action?token=041101518&billsys=CAMS', '_self', 'location=yes');
+        var ref = window.open('https://suns247.windstream.com:8183/mobile.action?token=041101518&billsys=CAMS', '_system', 'location=yes');
         ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
         ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
         ref.addEventListener('exit', function() { alert(event.type); });
@@ -40,6 +42,26 @@ $(document).on('click', '#apache2', function() {
         ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
         ref.addEventListener('exit', function() { alert(event.type); });
     });	
+</script>-->
+<script>
+// Wait for Cordova to load
+//
+function onLoad() {
+document.addEventListener("deviceready", onDeviceReady, false);
+}
+
+// Cordova is ready
+//
+function onDeviceReady() {
+/*
+var ref = window.open('http://apache.org', '_blank', 'location=yes');
+ref.addEventListener('loadstart', function(event) { alert('start: ' + event.url); });
+ref.addEventListener('loadstop', function(event) { alert('stop: ' + event.url); });
+ref.addEventListener('loaderror', function(event) { alert('error: ' + event.message); });
+ref.addEventListener('exit', function(event) { alert(event.type); });
+*/
+}
+</script>
 </script>
 <style>
 a{
@@ -47,12 +69,14 @@ font-size: 28px;
 }
 </style>
 	</head>
-    <body>
+    <body onLoad="onLoad()">
         <div class="app">
 		<a href="#" id="apache">Sample window to redirect to mobile page</a><br><br><br>
-		<a href="#" id="apache2">Sample window for plain HTML</a>
+		<a href="#" id="apache2">Sample window for plain HTML</a><br><br><br>
+		<a href="#" onclick="navigator.app.loadUrl('http://google.com', {openExternal : true})" >Android</a><br><br><br>
+		<button style="margin:1em;padding:1em;"><a href="#" onclick="window.open('play.google.com/';, '_blank', 'location=yes');">Our Apps</a></button> 
+		<input type="button" id="button1" onclick="window.open('http://google.com','_blank','location=yes','closebuttoncaption=Return');" value="Click Here">
+
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
