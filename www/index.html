@@ -26,10 +26,26 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
+<script src="http://code.jquery.com/jquery-1.11.2.js"></script>
+<script type="text/javascript" charset="utf-8">
+$(document).on('click', '#apache', function() {
+        var ref = window.open('https://suns247.windstream.com:8183/mobile.action?token=041101518&billsys=CAMS', '_blank', 'location=yes');
+        ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+        ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+        ref.addEventListener('exit', function() { alert(event.type); });
+    });
+$(document).on('click', '#apache2', function() {
+        var ref = window.open('sample.html', '_blank', 'location=yes');
+        ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+        ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+        ref.addEventListener('exit', function() { alert(event.type); });
+    });	
+</script>
 	</head>
     <body>
         <div class="app">
-		<br><br><button type="button" onclick="window.location.href='sample.html'">Click this to open in-app browser</button>
+		<a href="#" id="apache">Sample window to redirect to mobile page</a><br><br><br>
+		<a href="#" id="apache2">Sample window for plain HTML</a>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>

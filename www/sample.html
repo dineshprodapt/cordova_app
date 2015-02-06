@@ -27,18 +27,11 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
 		<script src="http://code.jquery.com/jquery-1.11.2.js"></script>
-<script type="text/javascript" charset="utf-8">
-    $('#apache').click(function() {
-        var ref = window.open('http://apache.org', '_blank', 'location=yes');
-        ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
-        ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
-        ref.addEventListener('exit', function() { alert(event.type); });
-    });
-</script>
+
 	</head>
     <body>
         <div class="app">
-		<a href="#" id="apache">Apache</a>
+		<p>Hi! Hello ePay Team! This is plain sample html page</p>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
