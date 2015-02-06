@@ -67,16 +67,16 @@ ref.addEventListener('exit', function(event) { alert(event.type); });
 a{
 font-size: 28px;
 }
+.btn
+{
+font-size: 30px;
+}
 </style>
 	</head>
     <body onLoad="onLoad()">
         <div class="app">
-		<a href="#" id="apache">Sample window to redirect to mobile page</a><br><br><br>
-		<a href="#" id="apache2">Sample window for plain HTML</a><br><br><br>
-		<a href="#" onclick="navigator.app.loadUrl('http://google.com', {openExternal : true})" >Android</a><br><br><br>
-		<button style="margin:1em;padding:1em;"><a href="#" onclick="window.open('play.google.com/';, '_blank', 'location=yes');">Our Apps</a></button> 
-		<input type="button" id="button1" onclick="window.open('http://google.com','_blank','location=yes','closebuttoncaption=Return');" value="Click Here">
-
+		<input type="button" id="button1" class="btn" onclick="window.open('http://windstream.com','_blank','location=yes','closebuttoncaption=Return');" value="ePay Mobile Screen"><br><br><br><br><br><br><br><br><br><br>
+	<a href="#" onclick="navigator.app.loadUrl('http://google.com', {openExternal : true})" >Open External Browser</a>
         </div>
     </body>
 </html>
