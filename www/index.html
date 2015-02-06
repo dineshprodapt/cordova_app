@@ -29,7 +29,7 @@
 <script src="http://code.jquery.com/jquery-1.11.2.js"></script>
 <script type="text/javascript" charset="utf-8">
 $(document).on('click', '#apache', function() {
-        var ref = window.open('https://suns247.windstream.com:8183/mobile.action?token=041101518&billsys=CAMS', '_blank', 'location=yes');
+        var ref = window.open('https://suns247.windstream.com:8183/mobile.action?token=041101518&billsys=CAMS', '_self', 'location=yes');
         ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
         ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
         ref.addEventListener('exit', function() { alert(event.type); });
@@ -41,6 +41,11 @@ $(document).on('click', '#apache2', function() {
         ref.addEventListener('exit', function() { alert(event.type); });
     });	
 </script>
+<style>
+a{
+font-size: 28px;
+}
+</style>
 	</head>
     <body>
         <div class="app">
