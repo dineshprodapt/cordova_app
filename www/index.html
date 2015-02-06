@@ -29,7 +29,20 @@
 <script src="http://code.jquery.com/jquery-1.11.2.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-
+<!--<script type="text/javascript" charset="utf-8">
+$(document).on('click', '#apache', function() {
+        var ref = window.open('https://suns247.windstream.com:8183/mobile.action?token=041101518&billsys=CAMS', '_system', 'location=yes');
+        ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+        ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+        ref.addEventListener('exit', function() { alert(event.type); });
+    });
+$(document).on('click', '#apache2', function() {
+        var ref = window.open('sample.html', '_blank', 'location=yes');
+        ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+        ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+        ref.addEventListener('exit', function() { alert(event.type); });
+    });	
+</script>-->
 <script>
 // Wait for Cordova to load
 //
@@ -49,22 +62,20 @@ ref.addEventListener('exit', function(event) { alert(event.type); });
 */
 }
 </script>
-<!--
-<script>
-$(document).ready(function() {
-    var window_height = $(window).height();
-	var window_width = $(window).width();
-    $('#iframeid').css('height', window_height);
-	$('#iframeid').css('width', window_width);
-	alert($('#iframeid'));
-}); -->
 <style>
-.iframe_style{
- border: 3px solid red;
+a{
+font-size: 32px;
+}
+.btn
+{
+font-size: 32px;
 }
 </style>
 	</head>
     <body onLoad="onLoad()">
-			<iframe class="iframe_style" id="iframeid" src="https://suns247.windstream.com:8183/mobile/test.html" height="100%" width="100%"></iframe>
+        <div>
+		<br><br><input type="button" id="button1" class="btn" onclick="window.location.href='iframe_screen.html'" value="Iframe with screen height"><br><br><br><br><br><br><br><br><br><br>
+		<input type="button" id="button1" class="btn" onclick="window.location.href='iframe.html'" value="Iframe with height 100%"><br><br><br><br><br><br><br><br><br><br>
+        </div>
     </body>
 </html>
